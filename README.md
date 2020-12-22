@@ -32,11 +32,15 @@ To get all needed roles required locally for the installation of the packages ru
 ./setupLocalhost.sh
 ```
 
-Now change the `server_hostname` variable in`vars/main.yml`to your given hostname and run `./setupSudoServer.sh` to install sudo privilage for the local user. This step is necessary so permissions for executing the packages inside the next playbook are configured correctly. After success run
+Now change the `server_hostname` variable in`vars/main.yml`to your given hostname and run `./setupSudoServer.sh` to install sudo privilage for the local user. This step is necessary so permissions for executing the packages inside the next playbook are configured correctly. On `BECOME password:` prompt, enter the **root** user password.
+
+After success run
 
 ```
 ansible-playbook -i hosts -K playbook.yml
 ```
+
+ On `BECOME password:` prompt, enter the **local** user password.
 
 The server should now be able to deploy a docker container running on port 3000 and be accessible from outside over the hostname.
 
