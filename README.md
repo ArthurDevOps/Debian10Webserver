@@ -20,13 +20,19 @@ Make sure that you are able to connect from your network to the machine hosted o
 
 ### How to use this?
 
-Pull the repository, insert credentials in the inventory and save. To check if the inventory file is setup correctly run
+Pull the repository, insert credentials in the inventory and save. To check if the inventory file is setup correctly run in terminal
 
 ```
 ./testConnection.sh
 ```
 
- Change the `server_hostname` variable in`vars/main.yml`to your given hostname and run `./setupSudoServer.sh` to install sudo privilage for the local user. This step is necessary so permissions for executing the packages inside the next playbook are configured correctly. After success run
+To get all needed roles required locally for the installation of the packages run in terminal
+
+```
+./setupLocalhost.sh
+```
+
+Now change the `server_hostname` variable in`vars/main.yml`to your given hostname and run `./setupSudoServer.sh` to install sudo privilage for the local user. This step is necessary so permissions for executing the packages inside the next playbook are configured correctly. After success run
 
 ```
 ansible-playbook -i hosts -K playbook.yml
