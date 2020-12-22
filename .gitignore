@@ -1,0 +1,6 @@
+Vagrantfile
+.vagrant
+hosts
+test.sh
+test.yml
+files/

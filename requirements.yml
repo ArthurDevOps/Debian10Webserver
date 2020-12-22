@@ -1,0 +1,9 @@
+---
+roles:
+- geerlingguy.nginx
+- weareinteractive.sudo
+- geerlingguy.certbot
+- geerlingguy.git
+- geerlingguy.pip
+- geerlingguy.docker
+- weareinteractive.ufw

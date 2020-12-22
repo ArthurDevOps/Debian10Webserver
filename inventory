@@ -1,0 +1,8 @@
+#Server IPs and credentials
+[Debian10]
+<IP Address>
+
+[Debian10:vars]
+ansible_user=<username>
+ansible_ssh_pass=<password>
+ansible_python_interpreter=/usr/bin/python3

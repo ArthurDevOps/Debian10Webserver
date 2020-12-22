@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  become_method: su
+  
+  roles:
+    - weareinteractive.sudo
+  vars:
+    sudo_users:
+      - name: 'local'
+        nopasswd: no

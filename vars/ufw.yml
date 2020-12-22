@@ -1,0 +1,19 @@
+# Ufw settings
+ufw_rules: 
+  # Set logging
+  - logging: "full"
+  # Allow OpenSSH
+  - rule: allow
+    name: OpenSSH
+  # Allow all access to tcp port 80
+  - rule: allow
+    from_port: '80'
+    to_port: '80'
+    proto: tcp
+  # Allow all access to tcp port 443
+  - rule: allow
+    from_port: '443'
+    to_port: '443'
+    proto: tcp
+# Manage the configuration file
+ufw_manage_config: true

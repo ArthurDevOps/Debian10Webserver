@@ -1,0 +1,17 @@
+# Python settings.
+pip_install_packages: ['pyopenssl','docker']
+# Nginx settings.
+nginx_vhosts: []
+nginx_remove_default_vhost: True
+nginx_ppa_version: stable
+nginx_docroot: /var/www/html
+# Self-signed certificate settings.
+certificate_dir: /etc/ssl/private
+server_hostname: <enterHostName>
+# # Certbot settings
+# certbot_create_if_missing: true
+# certbot_admin_email: <email-for-notifications>
+# certbot_create_standalone_stop_services: []
+# certbot_certs:
+#   - domains:
+#     - <domainName>
