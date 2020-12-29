@@ -65,6 +65,6 @@ Installs latest version of Docker and 1.26.0 docker-compose
 
 Rules: Allows all requests to OpenSSH
 
-​			Allow all traffic from 80/tcp to 80/tcp
+​			Allow all traffic to 80/tcp
 
-​			Allow all traffic from 443/tcp to 443/tcp
+​			Allow all traffic to 443/tcp
