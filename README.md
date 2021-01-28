@@ -37,7 +37,7 @@ Now change the `server_hostname` variable in`vars/main.yml`to your given hostnam
 After success run
 
 ```
-ansible-playbook -i hosts -K playbook.yml
+ansible-playbook -i inventory -K playbook.yml
 ```
 
  On `BECOME password:` prompt, enter the **local** user password.
