@@ -3,4 +3,3 @@ Vagrantfile
 hosts
 test.sh
 test.yml
-files/
