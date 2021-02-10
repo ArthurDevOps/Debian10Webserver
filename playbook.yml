@@ -24,16 +24,20 @@
   tasks:
     - import_tasks: tasks/self-signed-cert.yml
 
-    - name: Ensure docroot exists.
+    - name: Ensure App docroot exists.
       file:
-        path: "{{ nginx_docroot }}"
+        path: "{{ app_docroot }}"
         state: directory
 
-    - name: Copy example index.html file in place.
+    - name: Copy example Node App file in place.
       copy:
-        src: files/index.html
-        dest: "{{ nginx_docroot }}/index.html"
+        src: files/node-hello/
+        dest: "{{ app_docroot }}/node-hello/"
         mode: 0755
+
+    - name: Startup example Docker Container
+      shell: >
+        docker-compose -f {{ app_docroot }}/node-hello/docker-compose.yml up -d 
 
     - name: Copy Nginx server configuration in place.
       template:
