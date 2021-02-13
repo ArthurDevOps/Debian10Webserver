@@ -1,3 +1,0 @@
-[submodule "files/node-hello"]
-	path = files/node-hello
-	url = https://github.com/johnpapa/node-hello.git
